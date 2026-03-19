@@ -5,6 +5,8 @@ namespace Bulky_Web.Models
 {
     public class Category
     {
+
+        //Primary key van het model
         [Key]
         public int Id { get; set; }
         
