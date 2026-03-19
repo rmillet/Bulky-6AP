@@ -1,0 +1,21 @@
+﻿@if (TempData["success"] != null)
+{
+    @* <H2>@TempData["success"] </H2> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"> </script>
+    <script src=" //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js "></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["success"]',toastr.options = {"closeButton": true });
+    </script>
+}
+
+@if (TempData["fout"] != null)
+{
+    @* <H2>@TempData["fout"] </H2> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"> </script>
+    <script src=" //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js "></script>
+    
+    <script type="text/javascript">
+        toastr.error('@TempData["fout"]');
+    </script>
+}
